@@ -1,0 +1,4 @@
+com/SFhub/backend/repository/StoryRepository.class
+com/SFhub/backend/BackendApplication.class
+com/SFhub/backend/entity/Story.class
+com/SFhub/backend/controller/StoryController.class
