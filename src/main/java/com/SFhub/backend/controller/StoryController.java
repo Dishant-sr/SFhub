@@ -4,6 +4,7 @@ import com.SFhub.backend.entity.Story;
 import com.SFhub.backend.repository.StoryRepository;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -38,5 +39,25 @@ public Story getStoryById(@PathVariable Long id) {
                     )
             );
 }
+@PutMapping("/{id}")
+public ResponseEntity<Story> updateStory(
+        @PathVariable Long id,
+        @RequestBody Story updatedStory
+) {
+    return storyRepository.findById(id)
+            .map(existingStory -> {
+
+                existingStory.setTitle(updatedStory.getTitle());
+                existingStory.setAuthorName(updatedStory.getAuthorName());
+                existingStory.setContent(updatedStory.getContent());
+                existingStory.setLicenseType(updatedStory.getLicenseType());
+
+                Story savedStory = storyRepository.save(existingStory);
+                return ResponseEntity.ok(savedStory);
+
+            })
+            .orElse(ResponseEntity.notFound().build());
+}
+
 
 }
