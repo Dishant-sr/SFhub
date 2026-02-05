@@ -22,4 +22,15 @@ public class StoryController {
     public List<Story> getAllStories() {
         return storyRepository.findAll();
     }
+    @PostMapping
+    public Story createStory(@RequestBody Story story) {
+    return storyRepository.save(story);
+}
+@GetMapping("/{id}")
+public Story getStoryById(@PathVariable Long id) {
+    return storyRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Story not found"));
+}
+
+
 }
