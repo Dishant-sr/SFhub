@@ -3,6 +3,8 @@ package com.SFhub.backend.controller;
 import com.SFhub.backend.entity.Story;
 import com.SFhub.backend.repository.StoryRepository;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -29,8 +31,12 @@ public class StoryController {
 @GetMapping("/{id}")
 public Story getStoryById(@PathVariable Long id) {
     return storyRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Story not found"));
+            .orElseThrow(() ->
+                    new ResponseStatusException(
+                            HttpStatus.NOT_FOUND,
+                            "Story not found"
+                    )
+            );
 }
-
 
 }
