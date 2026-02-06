@@ -58,6 +58,17 @@ public ResponseEntity<Story> updateStory(
             })
             .orElse(ResponseEntity.notFound().build());
 }
+@DeleteMapping("/{id}")
+public ResponseEntity<Void> deleteStory(@PathVariable Long id) {
+
+    if (!storyRepository.existsById(id)) {
+        return ResponseEntity.notFound().build();
+    }
+
+    storyRepository.deleteById(id);
+    return ResponseEntity.noContent().build();
+}
+
 
 
 }
