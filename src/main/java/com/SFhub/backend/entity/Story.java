@@ -1,6 +1,8 @@
 package com.SFhub.backend.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,16 +13,22 @@ public class Story {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Title cannot be empty")
+    @Size(min = 3, max = 100, message = "Title must be between 3 and 100 characters")
     @Column(nullable = false)
     private String title;
 
+    @NotBlank(message = "Content cannot be empty")
+    @Size(min = 10, message = "Content must be at least 10 characters")
     @Lob
     @Column(nullable = false)
     private String content;
 
+    @NotBlank(message = "Author name is required")
     @Column(nullable = false)
     private String authorName;
 
+    @NotBlank(message = "License type is required")
     @Column(nullable = false)
     private String licenseType;
 
