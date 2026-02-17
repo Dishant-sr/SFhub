@@ -12,7 +12,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    // ✅ Handle validation errors
+    // Handle validation errors
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public Map<String, String> handleValidationExceptions(
@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
         return errors;
     }
 
-    // ✅ Handle NOT FOUND (your custom 404)
+    //  Handle NOT FOUND (your custom 404)
     @ExceptionHandler(ResponseStatusException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public Map<String, String> handleNotFound(ResponseStatusException ex) {
@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
         return error;
     }
 
-    // ✅ Handle all other exceptions (fallback)
+    // Handle all other exceptions (fallback)
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Map<String, String> handleGeneralException(Exception ex) {
