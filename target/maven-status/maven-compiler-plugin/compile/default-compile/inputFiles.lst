@@ -1,4 +1,6 @@
 /Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/BackendApplication.java
+/Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/DTO/StoryRequestDTO.java
+/Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/DTO/StoryResponseDTO.java
 /Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/controller/StoryController.java
 /Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/entity/Story.java
 /Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/exception/GlobalExceptionHandler.java
