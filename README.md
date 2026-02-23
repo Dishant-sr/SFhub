@@ -1,6 +1,6 @@
 # SFhub 🎬✍️
 
-SFhub is an open-source platform where writers can publish short-film stories and creators can discover, license, and credit them properly.
+SFhub is an open-source platform where writers can publish short-film stories and creators can discover, license, and credit them properly and also you could review tv series or webseries.
 
 ## 🚀 Vision
 - GitHub-like collaboration for film stories
