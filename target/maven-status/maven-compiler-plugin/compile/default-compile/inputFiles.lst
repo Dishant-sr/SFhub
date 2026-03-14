@@ -5,3 +5,5 @@
 /Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/entity/Story.java
 /Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/exception/GlobalExceptionHandler.java
 /Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/repository/StoryRepository.java
+/Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/service/StoryService.java
+/Users/dishantsinghrathore/Downloads/backend/src/main/java/com/SFhub/backend/service/StoryServiceImpl.java
